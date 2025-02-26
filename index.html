@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ليست_قمامتي_ولكنها_مدرستي#</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: url('leavest.png'), url('leaves2t.png');
+            background-size: 250px;
+            background-position: left top, right bottom;
+            background-repeat: no-repeat;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        h1 {
+            color: green;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin: 30px auto;
+            padding: 10px;
+            max-width: 800px;
+        }
+
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            transition: transform 0.3s;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .label {
+            margin-top: 10px;
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .description {
+            color: green;
+            font-size: 16px;
+            margin: 20px auto;
+            width: 90%;
+            text-align: center;
+            font-weight: bold;
+            padding: 0 15px;
+        }
+
+        .credit {
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                max-width: 80%;
+            }
+
+            body {
+                background-size: 150px;
+            }
+
+            .description, .credit {
+                font-size: 14px;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>ليست_قمامتي_ولكنها_مدرستي#</h1>
+    <img src="recycle.png" class="icon" style="margin-bottom: 20px;">
+    
+    <div class="container">
+        <div class="icon-container">
+            <img src="paper.png" class="icon" data-url="paper.html">
+            <div class="label">الورق</div>
+        </div>
+        <div class="icon-container">
+            <img src="box.png" class="icon" data-url="box.html">
+            <div class="label">الكرتون</div>
+        </div>
+        <div class="icon-container">
+            <img src="bottle.png" class="icon" data-url="bottle.html">
+            <div class="label">البلاستيك</div>
+        </div>
+        <div class="icon-container">
+            <img src="can.png" class="icon" data-url="can.html">
+            <div class="label">المعدن</div>
+        </div>
+        <div class="icon-container">
+            <img src="food.png" class="icon" data-url="food.html">
+            <div class="label">بقايا الطعام</div>
+        </div>
+        <div class="icon-container">
+            <img src="glass.png" class="icon" data-url="glass.html">
+            <div class="label">الزجاج</div>
+        </div>
+    </div>
+    
+    <div class="description">
+        "ليست قمامتي، لكنها مدرستي" هو موقع تعليمي يقدم مقالات وفيديوهات عن إعادة التدوير، مع نصائح لتحويل النفايات إلى منتجات مفيدة بهدف تعزيز الاستدامة البيئية"<br><br>
+        <strong>.اضغط على الأيقونات لمعرفة كيفية إعادة تدوير كل منتج</strong>
+    </div>
+    
+    <div class="credit">
+        تم إنشاء هذا الموقع بواسطة 
+        <strong>مريم إيهاب</strong>، 
+        إيمانًا بأهمية إعادة التدوير ودوره في بناء بيئة نظيفة ومستدامة للجميع
+    </div>
+
+    <script>
+        document.querySelectorAll('.icon[data-url]').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const url = this.getAttribute('data-url');
+                window.location.href = url;
+            });
+        });
+    </script>
+</body>
+</html>
